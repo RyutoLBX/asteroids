@@ -49,6 +49,7 @@ def main() -> None:
       obj.draw(screen)
     
     pygame.display.flip()
+  # End of game loop
 
 if __name__ == "__main__":
   main()
