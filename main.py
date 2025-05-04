@@ -6,9 +6,10 @@ from asteroid import Asteroid
 from asteroidfield import AsteroidField
 from shot import Shot
 from scorelabel import ScoreLabel
+from prettyprint import pretty_print, print_end_score
 
 def main() -> None:
-  print("========================= Starting Asteroids! =========================")
+  pretty_print("Launching Asteroids!")
 
   pygame.init()
   screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
@@ -48,7 +49,8 @@ def main() -> None:
 
     for ast in asteroids:
       if player.is_colliding(ast):
-        print("============================== Game Over ==============================")
+        pretty_print("GAME OVER")
+        print_end_score(score)
         sys.exit()
 
       for bullet in shots:
